@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/AspNetCoreTodo/bin/Debug/netcoreapp3.1/AspNetCoreTodo.dll",
+            "program": "${workspaceFolder}/Todo/bin/Debug/netcoreapp3.1/AspNetCoreTodo.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/AspNetCoreTodo",
+            "cwd": "${workspaceFolder}/Todo",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {

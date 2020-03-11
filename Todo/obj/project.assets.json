@@ -1583,11 +1583,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MyData\\Projects\\DotNet\\AspNetCore\\AspNetCoreTodo\\AspNetCoreTodo\\AspNetCoreTodo.csproj",
+      "projectUniqueName": "C:\\MyData\\Projects\\DotNet\\AspNetCore\\Todo\\Todo\\AspNetCoreTodo.csproj",
       "projectName": "AspNetCoreTodo",
-      "projectPath": "C:\\MyData\\Projects\\DotNet\\AspNetCore\\AspNetCoreTodo\\AspNetCoreTodo\\AspNetCoreTodo.csproj",
+      "projectPath": "C:\\MyData\\Projects\\DotNet\\AspNetCore\\Todo\\Todo\\AspNetCoreTodo.csproj",
       "packagesPath": "C:\\Users\\Amol\\.nuget\\packages\\",
-      "outputPath": "C:\\MyData\\Projects\\DotNet\\AspNetCore\\AspNetCoreTodo\\AspNetCoreTodo\\obj\\",
+      "outputPath": "C:\\MyData\\Projects\\DotNet\\AspNetCore\\Todo\\Todo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
