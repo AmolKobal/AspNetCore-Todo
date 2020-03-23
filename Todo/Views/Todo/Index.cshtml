@@ -1,4 +1,5 @@
 @model TodoViewModel
+@using Humanizer
 
 @{
     ViewData["Title"] = "Manage your todo list";
@@ -11,7 +12,7 @@
 
     <table class="table table-hover">
         <thead>
-            <tr>
+            <tr class="bg-light text-dark">
                 <td>&#x2714;</td>
                 <td>Item</td>
                 <td>Due</td>
@@ -24,7 +25,7 @@
                         <input type="checkbox" class="done-checkbox"/>
                     </td>
                     <td>@item.Title</td>
-                    <td>@item.DueAt</td>
+                    <td>@item.DueAt.Humanize()</td>
                 </tr>
             }
         </thead>
@@ -33,4 +34,5 @@
 
 <div class="panel-footer add-item-form">
     <!-- Todo: Add Item form -->
+    @await Html.PartialAsync("AddItemPartial", new TodoItem())
 </div>
