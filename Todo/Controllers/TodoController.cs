@@ -1,19 +1,26 @@
 using Microsoft.AspNetCore.Mvc;
 using AspNetCoreTodo.Models;
-using System;
+using AspNetCoreTodo.Services;
+using System.Threading.Tasks;
 
 namespace AspNetCoreTodo.Controllers
 {
     public class TodoController : Controller
     {
-        public IActionResult Index()
+        private readonly ITodoItemService _todoItemService;
+        public TodoController(ITodoItemService todoItemService)
         {
-            TodoItem item = new TodoItem();
-            item.Title = "First Todo";
-            item.IsDone = false;
-            item.DueAt = DateTime.Now;
+            _todoItemService = todoItemService;
+        }
+        public async Task<IActionResult> Index()
+        {
+            var items = await _todoItemService.GetIncompleteItemsAsync();
 
-            return Content(item.Title);
+            var model = new TodoViewModel {
+                Items = items,
+            };
+
+            return View(model);
         }
     }
 }
