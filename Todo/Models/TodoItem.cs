@@ -7,9 +7,11 @@ namespace AspNetCoreTodo.Models
     {
         public Guid Id { get; set; }
 
+        public string UserID { get; set; }
+
         public bool IsDone { get; set; }
 
-        [Required]
+        [Required(ErrorMessage="Todo item is require")]
         public string Title { get; set; }
 
         public DateTimeOffset? DueAt { get; set; }
