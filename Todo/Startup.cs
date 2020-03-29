@@ -27,9 +27,9 @@ namespace AspNetCoreTodo
                     Configuration.GetConnectionString("DefaultConnection")));
             
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-            //services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             
+            //services.AddIdentity<IdentityUser, IdentityRole>();
             
             services.AddControllersWithViews();
             services.AddRazorPages();

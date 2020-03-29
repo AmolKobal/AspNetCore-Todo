@@ -1,0 +1,67 @@
+@using Todo.Models
+
+@model ManageUsersViewModel
+
+@{
+    ViewData["Title"] = "Manage Users";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="card">
+    <h5 class="card-header">Administrators</h5>
+
+    <table class="table">
+        <thead style="font-weight: bold; background-color: aliceblue;">
+            <tr>
+                <td>
+                    ID
+                </td>
+                <td>
+                    Email
+                </td>
+            </tr>
+        </thead>
+
+        @foreach (var user in Model.Administrators)
+        {
+            <tr>
+                <td>
+                    @user.Id | @user.UserName
+                </td>
+                <td>
+                    @user.Email
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+<div class="card">
+    <h5 class="card-header">Everyone</h5>
+
+    <table class="table">
+        <thead style="font-weight: bold; background-color: aliceblue;">
+            <tr>
+                <td>
+                    ID
+                </td>
+                <td>
+                    Email
+                </td>
+            </tr>
+        </thead>
+
+        @foreach (var user in Model.Everyone)
+        {
+            <tr>
+                <td>
+                    @user.Id | @user.UserName
+                </td>
+                <td>
+                    @user.Email
+                </td>
+            </tr>
+        }
+    </table>
+</div>
