@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using AspNetCoreTodo.Models;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
 using Todo.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore; 
 
-namespace AspNetCoreTodo.Data
+namespace Todo.Data
 {
     public class ApplicationDbContext : IdentityDbContext 
     {

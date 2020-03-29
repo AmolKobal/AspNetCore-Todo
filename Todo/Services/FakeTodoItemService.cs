@@ -1,10 +1,9 @@
 using System;
 using System.Threading.Tasks;
-using AspNetCoreTodo.Models;
-using Microsoft.AspNetCore.Identity;
 using Todo.Models;
+using Microsoft.AspNetCore.Identity; 
 
-namespace AspNetCoreTodo.Services
+namespace Todo.Services
 {
     public class FakeTodoItemService : ITodoItemService
     {

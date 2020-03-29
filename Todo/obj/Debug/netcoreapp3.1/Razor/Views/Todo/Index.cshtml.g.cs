@@ -14,14 +14,14 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "C:\MyData\Projects\DotNet\AspNetCore\Todo\Todo\Views\_ViewImports.cshtml"
-using AspNetCoreTodo;
+using Todo;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 2 "C:\MyData\Projects\DotNet\AspNetCore\Todo\Todo\Views\_ViewImports.cshtml"
-using AspNetCoreTodo.Models;
+using Todo.Models;
 
 #line default
 #line hidden
@@ -34,7 +34,7 @@ using Humanizer;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f9ebe605658c497caa4050ce386d74469ada370e", @"/Views/Todo/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"63823eaa5b73e495aebe7447edc96790f50c299d", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dd3168c5f708092a6e9c8dc4360b5cb5eef77b73", @"/Views/_ViewImports.cshtml")]
     public class Views_Todo_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<TodoViewModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "MarkDone", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -103,7 +103,7 @@ using Humanizer;
 #line hidden
 #nullable disable
             WriteLiteral("                <tr>\r\n                    <td>\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f9ebe605658c497caa4050ce386d74469ada370e5197", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f9ebe605658c497caa4050ce386d74469ada370e5177", async() => {
                 WriteLiteral("\r\n                            <input type=\"checkbox\" class=\"done-checkbox\"/>\r\n                            <input type=\"hidden\" name=\"id\"");
                 BeginWriteAttribute("value", " value=\"", 844, "\"", 860, 1);
 #nullable restore

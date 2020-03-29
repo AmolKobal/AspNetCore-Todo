@@ -1,18 +1,17 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using AspNetCoreTodo.Data;
-using AspNetCoreTodo.Models;
+using Todo.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Todo.Models;
 
-namespace AspNetCoreTodo.Services
+namespace Todo.Services
 {
     public class TodoItemService : ITodoItemService
     {
         private readonly ApplicationDbContext _context;
-
+    
         public TodoItemService(ApplicationDbContext context)
         {
             _context = context;

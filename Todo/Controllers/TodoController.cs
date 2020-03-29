@@ -1,13 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
-using AspNetCoreTodo.Models;
-using AspNetCoreTodo.Services;
+using Todo.Models;
+using Todo.Services;
 using System.Threading.Tasks;
 using System;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
-using Todo.Models;
 
-namespace AspNetCoreTodo.Controllers
+namespace Todo.Controllers
 {
     [Authorize]
     public class TodoController : Controller

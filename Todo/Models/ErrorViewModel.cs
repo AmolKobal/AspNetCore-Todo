@@ -1,6 +1,6 @@
 using System;
 
-namespace AspNetCoreTodo.Models
+namespace Todo.Models
 {
     public class ErrorViewModel
     {
