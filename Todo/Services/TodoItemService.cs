@@ -9,7 +9,8 @@ using Todo.Models;
 namespace Todo.Services
 {
     public class TodoItemService : ITodoItemService
-    {
+    {        
+        private const int _defaultDueDays = 3;
         private readonly ApplicationDbContext _context;
     
         public TodoItemService(ApplicationDbContext context)
@@ -22,6 +23,11 @@ namespace Todo.Services
             newItem.Id = Guid.NewGuid();
             newItem.IsDone = false;
             newItem.UserID = user.Id;
+
+            if(newItem.DueAt == null)
+            {
+                newItem.DueAt = DateTimeOffset.Now.AddDays(_defaultDueDays);
+            }
             
             _context.Items.Add(newItem);
 

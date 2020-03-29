@@ -15,7 +15,6 @@ namespace Todo.Controllers
         private readonly UserManager<IdentityUser> _userManager;
 
         private readonly SignInManager<IdentityUser> _signInManager;
-        private const int _defaultDueDays = 3;
         public TodoController(ITodoItemService todoItemService,
                               UserManager<IdentityUser> userManager,
                               SignInManager<IdentityUser> signInManager)
@@ -49,11 +48,6 @@ namespace Todo.Controllers
             {
                 return RedirectToAction("Index");
                 //return View("Index", items);
-            }
-
-            if(newItem.DueAt == null)
-            {
-                newItem.DueAt = DateTimeOffset.Now.AddDays(_defaultDueDays);
             }
 
             var currentUser = await _userManager.GetUserAsync(User);
