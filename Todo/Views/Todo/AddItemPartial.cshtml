@@ -5,6 +5,10 @@
         <h5 class="card-header">New Todo Item:</h5>
         <div class="card-body">
             <div asp-validation-summary="All" class="text-danger"></div>
+            @if(ViewData["Error"] != null)
+            { 
+                <span class="text-danger">@ViewData["Error"].ToString()</span>
+            }
             <div class="container">
                 <div class="input-group input-group-sm mb-3">
                     <div class="col-12 col-md-1">
@@ -28,6 +32,8 @@
                 <div class="input-group input-group-sm mb-3 justify-content-center">
                     <div class="col align-self-center">
                         <button class="btn btn-primary" style="width: 120px;" type="submit">Add</button>
+                        <input class="btn btn-primary" style="width: 120px;" type="button" value="Cancel"
+                            onclick="javascript:document.location.href='@Url.Action("Index", "Todo")'" />
                     </div>
                 </div>
             </div>

@@ -14,6 +14,8 @@ namespace Todo.Models
         [Required(ErrorMessage="Todo item is require")]
         public string Title { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}"), DataType(DataType.Date)]
+        [StringLength(10)]
         public DateTimeOffset? DueAt { get; set; }
     }
 }

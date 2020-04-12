@@ -46,8 +46,7 @@ namespace Todo.Controllers
         {
             if(!ModelState.IsValid)
             {
-                return RedirectToAction("Index");
-                //return View("Index", items);
+                return View("AddItemPartial", newItem);
             }
 
             var currentUser = await _userManager.GetUserAsync(User);
@@ -55,7 +54,8 @@ namespace Todo.Controllers
             var successful = await _todoItemService.AddItemAsync(newItem, currentUser);
             if(!successful)
             {
-                return BadRequest($"Could not add Item {newItem.Title}");
+                ViewData["Error"] = $"Could not add Todo Item {newItem.Title}";
+                return View("AddItemPartial", newItem); 
             }
 
             return RedirectToAction("Index");
@@ -78,6 +78,11 @@ namespace Todo.Controllers
             }
 
             return RedirectToAction("Index");
+        }
+
+        public IActionResult New()
+        {
+            return View("AddItemPartial");
         }
     }
 }

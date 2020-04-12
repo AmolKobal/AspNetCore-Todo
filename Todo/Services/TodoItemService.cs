@@ -19,7 +19,7 @@ namespace Todo.Services
         }
 
         public async Task<bool> AddItemAsync(TodoItem newItem, IdentityUser user)
-        {
+        { 
             newItem.Id = Guid.NewGuid();
             newItem.IsDone = false;
             newItem.UserID = user.Id;
